@@ -1,0 +1,86 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: monospace, sans-serif;
+  font-weight: bold;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: black;
+}
+
+.mainContainer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  padding-top: 10px;
+  min-height: 80vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.mainContainer > button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px solid, orange;
+  outline-color: none;
+  color: white;
+  background-color: black;
+}
+
+.mainContainer > button:hover{
+  background-color: yellow;
+  color: black
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1/ -1;
+  background-color: #262626;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border: 1px solid grey;
+}
+
+.output .previous-operand {
+  color: yellow;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2rem
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+h1 {
+  font-size: 3rem;
+  background: -webkit-linear-gradient(#DCDCDC, #191970);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+.end {
+  color: white;
+  font-weight: lighter;
+  font-size: 1rem;
+  text-align: center;
+}
